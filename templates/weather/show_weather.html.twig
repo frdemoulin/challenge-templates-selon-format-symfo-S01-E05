@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prévisions météo{% endblock %}
+
+{% block body %}
+    <h1>Prévisions météos</h1>
+
+    <p><a href="{{ path('home') }}">Retour à l'accueil</a></p>
+
+    <div class="row justify-content-md-center">
+        <table class="table table-hover table-sm">
+            {% for value in weatherData %}
+                <thead>
+                    <tr class="active">
+                        <th colspan="4">
+                            <h2>{{ value.city }}</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Jour</th>
+                        <th>T min</th>
+                        <th>T max</th>
+                        <th>Ciel</th>
+                    </tr>
+                </thead>
+                {% for forecast in value.weather %}
+                    <tbody>
+                        <td>{{ forecast.day|date("d-m-Y") }} </td>
+                        <td>{{ forecast.min }} &deg;C</td>
+                        <td>{{ forecast.max }} &deg;C</td>
+                        <td><div class="meteo scale {{ forecast.image }}"></div></td>
+                    </tbody>
+                {% endfor %}                    
+            {% endfor %}
+        </table>
+    </div>
+
+    
+
+{% endblock %}

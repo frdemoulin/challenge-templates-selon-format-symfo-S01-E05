@@ -1,0 +1,14 @@
+<weather>
+    {% for value in weatherData %}
+        <city name="{{ value.city }}">
+            {% for forecast in value.weather %}
+                <forecast>
+                    <day>{{ forecast.day }} </day>
+                    <min>{{ forecast.min }} </min>
+                    <max>{{ forecast.max }} </max>
+                    <image>{{ forecast.image }}</image>
+                </forecast>
+            {% endfor %}
+        </city>                  
+    {% endfor %}
+</weather>

@@ -1,0 +1,27 @@
+.meteo {
+  display: block;
+  width: 325px;
+  height: 325px;
+  max-width: 100%;
+}
+
+.cloudy     { background: url('images/meteo.jpg') no-repeat 0 0; }
+.cloudy-sun { background: url('images/meteo.jpg') no-repeat -325px 0; }
+.clouds     { background: url('images/meteo.jpg') no-repeat -650px 0; }
+.thunder    { background: url('images/meteo.jpg') no-repeat -975px 0; }
+.rain-s     { background: url('images/meteo.jpg') no-repeat 0 -325px; }
+.rain-l     { background: url('images/meteo.jpg') no-repeat -325px -325px; }
+.snow       { background: url('images/meteo.jpg') no-repeat -650px -325px; }
+.hail       { background: url('images/meteo.jpg') no-repeat -975px -325px; }
+.cloud-rain { background: url('images/meteo.jpg') no-repeat 0 -650px; }
+.sun-rain   { background: url('images/meteo.jpg') no-repeat -325px -650px; }
+.sun        { background: url('images/meteo.jpg') no-repeat -650px -650px; }
+.sunset     { background: url('images/meteo.jpg') no-repeat -975px -650px; }
+.night      { background: url('images/meteo.jpg') no-repeat 0 -975px; }
+.fog        { background: url('images/meteo.jpg') no-repeat -325px -975px; }
+.water      { background: url('images/meteo.jpg') no-repeat -650px -975px; }
+.umbrella   { background: url('images/meteo.jpg') no-repeat -975px -975px; }
+
+.scale {
+    zoom: 0.075;
+}
